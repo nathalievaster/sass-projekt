@@ -177,7 +177,33 @@ header nav ul li a.active {
     line-height: 1.5em;
     border-radius: 8px; /* Rundade hörn för en mjukare look */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Skugga för att ge djup */
+}
 
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 20px 0;
+}
+
+th {
+    cursor: pointer; /* Gör pilarna synliga och att man kan klicka på rubrikerna */
+    background-color: #fef6f5;
+}
+
+th:hover {
+    background-color: #fad3cfd3;
+}
+td {
+    text-align: center;
+}
+
+th, td {
+    padding: 12px; /* Lägg till utrymme i varje cell */
+    border: 1px solid black; 
 }
 
 footer {
