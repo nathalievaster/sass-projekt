@@ -59,10 +59,10 @@ function printCourses (data) {
         const row = document.createElement("tr"); // Skapa en ny rad
 
         row.innerHTML = `
-            <td>${course.code}</td>
-            <td>${course.coursename}</td>
-            <td>${course.progression}</td>
-        `;
+        <td data-label="Kurskod">${course.code}</td>
+        <td data-label="Kursnamn">${course.coursename}</td>
+        <td data-label="Progression">${course.progression}</td>
+    `;
 
         courseEl.appendChild(row); // Lägg till raden i tabellen
     });
