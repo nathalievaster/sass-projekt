@@ -24,9 +24,11 @@ function toggleMenu() {
 /* Skriver ut kurserna */
 
 let courses = [];
+let sortOrder = 1;
 
 window.onload = () => {
     loadCourses();
+    document.querySelector("#sortName").addEventListener("click", () => sortCourses("name"));
 }
 
 async function loadCourses() {
@@ -59,4 +61,10 @@ function printCourses (data) {
 
         courseEl.appendChild(row); // Lägg till raden i tabellen
     });
+}
+
+function sortCourses(name) {
+    courses.sort((a, b) => (a.coursename > b.coursename ? 1 : -1) * sortOrder);
+    sortOrder *= -1; // Växla mellan stigande och fallande
+    printCourses(courses);
 }
