@@ -26,11 +26,13 @@ function toggleMenu() {
 let courses = [];
 let sortOrderName = 1;
 let sortOrderCode = 1;
+let sortOrderProgression = 1;
 
 window.onload = () => {
     loadCourses();
     document.querySelector("#sortName").addEventListener("click", sortByName);
     document.querySelector("#sortCode").addEventListener("click", sortByCode);
+    document.querySelector("#sortProgression").addEventListener("click", sortByProgression);
 }
 
 async function loadCourses() {
@@ -74,5 +76,11 @@ function sortByName() {
 function sortByCode() {
     courses.sort((a, b) => (a.code > b.code ? 1 : -1) * sortOrderCode);
     sortOrderCode *= -1; // Växla mellan stigande och fallande
+    printCourses(courses);
+}
+
+function sortByProgression() {
+    courses.sort((a, b) => (a.progression > b.progression ? 1 : -1) * sortOrderProgression);
+    sortOrderProgression *= -1; // Växla mellan stigande och fallande
     printCourses(courses);
 }
