@@ -38,10 +38,19 @@
     </header>
 
     <main class="index-text">
-        <h1>Moment 2 - Frontend-baserad webbutveckling</h1>
+        <h1>Webbutveckling - Ramschema</h1>
         <input type="text" id="searchInput" placeholder="Sök efter kurskod eller kursnamn...">
         <table>
-            
+            <thead>
+                <tr> 
+                    <th>Kurskod</th>  
+                    <th>Kursnamn</th>
+                    <th>Progression</th>
+                </tr>
+            </thead>
+            <tbody id="courseTableBody">
+                <!-- Kursdata kommer att laddas här med JavaScript -->
+            </tbody>
         </table>
     </main>
     <footer>

@@ -20,3 +20,20 @@ function toggleMenu() {
         navMenuEl.style.display = "none";
     }
 }
+
+/* Skriver ut kurserna */
+
+window.onload = () => {
+    loadCourses();
+}
+
+async function loadCourses() {
+    try {
+        const response = await fetch("https://webbutveckling.miun.se/files/ramschema_ht24.json");
+        const data = await response.json();
+
+        console.table(data);
+    } catch(error){
+        console.error(error)
+    }
+}
