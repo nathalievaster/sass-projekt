@@ -24,11 +24,13 @@ function toggleMenu() {
 /* Skriver ut kurserna */
 
 let courses = [];
-let sortOrder = 1;
+let sortOrderName = 1;
+let sortOrderCode = 1;
 
 window.onload = () => {
     loadCourses();
-    document.querySelector("#sortName").addEventListener("click", () => sortCourses("name"));
+    document.querySelector("#sortName").addEventListener("click", sortByName);
+    document.querySelector("#sortCode").addEventListener("click", sortByCode);
 }
 
 async function loadCourses() {
@@ -63,8 +65,14 @@ function printCourses (data) {
     });
 }
 
-function sortCourses(name) {
-    courses.sort((a, b) => (a.coursename > b.coursename ? 1 : -1) * sortOrder);
-    sortOrder *= -1; // Växla mellan stigande och fallande
+function sortByName() {
+    courses.sort((a, b) => (a.coursename > b.coursename ? 1 : -1) * sortOrderName);
+    sortOrderName *= -1; // Växla mellan stigande och fallande
+    printCourses(courses);
+}
+
+function sortByCode() {
+    courses.sort((a, b) => (a.code > b.code ? 1 : -1) * sortOrderCode);
+    sortOrderCode *= -1; // Växla mellan stigande och fallande
     printCourses(courses);
 }
