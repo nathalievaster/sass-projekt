@@ -33,6 +33,7 @@ window.onload = () => {
     document.querySelector("#sortName").addEventListener("click", sortByName);
     document.querySelector("#sortCode").addEventListener("click", sortByCode);
     document.querySelector("#sortProgression").addEventListener("click", sortByProgression);
+    document.querySelector("#searchInput").addEventListener("input", filterData);
 }
 
 async function loadCourses() {
@@ -83,4 +84,13 @@ function sortByProgression() {
     courses.sort((a, b) => (a.progression > b.progression ? 1 : -1) * sortOrderProgression);
     sortOrderProgression *= -1; // Växla mellan stigande och fallande
     printCourses(courses);
+}
+
+function filterData() {
+    const searchPhrase = document.querySelector("#searchInput").value.toLowerCase(); // Hämta texten från inputfältet och gör den lowercase
+    const filteredData = courses.filter(course =>
+        course.coursename.toLowerCase().includes(searchPhrase) ||  
+        course.code.toLowerCase().includes(searchPhrase)     
+    );
+    printCourses(filteredData); 
 }
