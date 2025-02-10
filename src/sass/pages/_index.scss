@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -18,4 +20,26 @@
     padding: 5em;
     line-height: 1.8em;
     font-weight: bolder;
+}
+
+.card {
+    max-width: 400px;
+    @include card(var(--background-color)); 
+
+    img {
+        width: 80%;
+        height: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    h3 {
+        margin: 1em 0 0.5em;
+        font-size: 1.5em;
+    }
+
+    p {
+        padding: 0 1em;
+        font-size: 1em;
+    }
 }
