@@ -1,12 +1,12 @@
-@import 'abstracts/variables';
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
 
-@import 'base/reset';
+@use 'base/reset';
 
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
+@use 'layout/navigation';
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/footer';
 
-@import 'components/buttons';
+@use 'components/buttons';
