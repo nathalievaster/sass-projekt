@@ -3,6 +3,7 @@
 @use 'abstracts/mixins';
 
 @use 'base/reset';
+@use 'base/typography';
 
 @use 'layout/navigation';
 @use 'layout/grid';
@@ -12,3 +13,5 @@
 @use 'components/buttons';
 
 @use 'themes/theme';
+
+@use 'pages/index';
