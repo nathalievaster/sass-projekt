@@ -1,16 +1,16 @@
 // Ljust tema
-$primary-light: #6B8EAA; 
-$secondary-light: #EAE7DC; 
-$accent-light: #A3B18A; 
-$text-light: #333; 
-$background-light: #F9F9F9;  
+$primary-light: #CAE0BC; 
+$secondary-light: #6E8E59; 
+$accent-light: #780C28; 
+$text-light: #000000; 
+$background-light: #ddebdd;  
 
-// Mörkt tema
-$primary-dark: #50778D; 
-$secondary-dark: #1C1C1C; 
-$accent-dark: #586F50; 
-$text-dark: #D6D6D6;  
-$background-dark: #121212; 
+// Darken färger för mörkt tema
+$primary-dark: darken($primary-light, 15%); 
+$secondary-dark: darken($secondary-light, 20%); 
+$accent-dark: darken($accent-light, 25%); 
+$text-dark: lighten($text-light, 30%);  // ljusare text för mörk bakgrund
+$background-dark: darken($background-light, 30%); 
 
 // CSS-variabler (standard: ljust tema)
 :root {

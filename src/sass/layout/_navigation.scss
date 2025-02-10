@@ -1,0 +1,21 @@
+nav ul {
+    display: flex; /* Gör listan horisontell */
+}
+
+nav ul li {
+    margin-right: 1.6em;
+    font-size: 1.2em;
+}
+
+/* Stil på länkarna i menyn */
+nav ul li a {
+    color: var(--text-color);
+    font-weight: bold; /* Gör texten fetare */
+    padding: 5px 10px; /* Bättre klickvänlighet */
+}
+
+
+nav ul li a:hover {
+    background-color: var(--secondary-color); 
+    border-radius: 4px; /* Lägg till rundade hörn */
+}
