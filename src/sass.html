@@ -12,36 +12,57 @@
 <body>
     <header>
         <h1><a href="index.html">Moment 2</a></h1>
-                <!-- Menyknapp för att öppna meny på mobila enheter -->
-                <button class="menu-btn open" id="open-menu">
-                    <span class="menu-icon">
-                        <span class="bars"></span>
-                        <span class="bars"></span>
-                        <span class="bars"></span>
-                    </span>
-                    <span class="menu-text">Meny</span>
-                </button>
-                <!-- Navigeringsmeny -->
-                <nav id="nav-menu">
-                    <!-- Menyknapp för att stänga menyn på mobila enheter -->
-                    <button class="menu-btn close" id="close-menu">
-                        <span class="menu-icon">
-                            <span class="bars cross1"></span>
-                            <span class="bars cross2"></span>
-                        </span>
-                        <span class="menu-text">Stäng meny</span>
-                    </button>
-                    <ul>
-                        <li><a href="index.html">Startsida</a></li>
-                        <li><a href="sass.html" class="active">SASS</a></li>
-                        <li><a href="pictures.html">Bilder</a></li>
-                        <li>#</li>
-                        <li>#</li>
-                    </ul>
-                </nav>
+        <!-- Menyknapp för att öppna meny på mobila enheter -->
+        <button class="menu-btn open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+            <span class="menu-text">Meny</span>
+        </button>
+        <!-- Navigeringsmeny -->
+        <nav id="nav-menu">
+            <!-- Menyknapp för att stänga menyn på mobila enheter -->
+            <button class="menu-btn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+                <span class="menu-text">Stäng meny</span>
+            </button>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="sass.html" class="active">SASS</a></li>
+                <li><a href="pictures.html">Bilder</a></li>
+                <li>#</li>
+                <li>#</li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="index-text">
+    <main>
+        <h1>Arbetet med SASS</h1>
+
+        <section class="sass-text">
+            <h2>Att komma igång</h2>
+            <p>Precis som Malin Larsson sa, var tröskeln låg vad gällde att komma igång med SASS. Mycket lätt med tanke
+                på att det i grund och botten bara är att skriva CSS som vi nu är vana vid - fast med fler funktioner.
+                Det som är ovant är att ha sin CSS i olika mappar och filer - även om det underlättar enormt. Jag valde
+                att testa från början med 7:1 strukturen, för att sen plocka bort de mappar jag märkte inte var 
+                nödvändiga. Vissa kanske upplever det vara lättare att göra tvärtom, att istället bygga på allteftersom man
+                märker att fler mappar behövs, men för mig fungerade detta bra.
+            </p>
+            <p>Jag tror dock att i små projekt som detta fungerar den vanliga CSSen utan partials bättre - eller så är det
+                helt enkelt bara ovanan. Ett annat problem jag upplevde med SASS var den måste kompileras till CSS för att
+                kunna användas i webbläsaren. Jag tror det är detta som orsakar att min live-server kraschar titt som 
+                tätt. Jag kan inte heller välja att visa sidan utan live-server i och med att webbläsaren inte kan förstå
+                SASS utan kompilering. Jag testade att köra <code>npm run start -- --no-hmr</code> vilket stänger av Hot Module 
+                Replacement (HMR), vilket normalt uppdaterar delar av koden utan att ladda om hela sidan. Det fungerade
+                till viss del - men var jag för långsam på fingrarna när jag kodade kraschade allt och jag fick göra ny
+                <code>npm run start</code>.
+            </p>
+        </section>
 
     </main>
     <footer>
