@@ -23,7 +23,7 @@
 }
 
 .card {
-    max-width: 400px;
+    max-width: 350px;
     @include card(var(--background-color)); 
 
     img {
@@ -43,3 +43,29 @@
         font-size: 1em;
     }
 }
+
+@media screen and (max-width: 950px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .card {
+        max-width: 300px;
+        }
+        .card-container {
+            gap: 0em;
+            margin: 4em 0em;
+        }
+}
+@media screen and (max-width: 900px){
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .card {
+        max-width: 80%;
+        margin: 2em 0em auto;
+        margin-left: 4em;
+
+    }
+    }
