@@ -1,4 +1,6 @@
 @use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+
 
 .grid-container {
     display: grid;
@@ -25,6 +27,7 @@
 .card {
     max-width: 350px;
     @include card(var(--background-color)); 
+    @include hover-effect("scale");
 
     img {
         width: 80%;
@@ -72,3 +75,5 @@
 
     }
     }
+
+    

@@ -5,3 +5,11 @@
     margin: 4em 0em;
     margin-left: 4em;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    gap: 1em;
+    padding: 2em;
+    justify-content: center;
+}
