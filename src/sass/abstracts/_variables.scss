@@ -1,7 +1,9 @@
+@use "sass:color";
+
 // Ljust tema
 $primary-light: #CAE0BC; 
 $secondary-light: #6E8E59; 
-$accent-light: #780C28; 
+$accent-light: color.complement($secondary-light); 
 $text-light: #000000; 
 $background-light: #ddebdd;  
 

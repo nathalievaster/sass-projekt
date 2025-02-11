@@ -49,6 +49,9 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+    .index-text {
+        max-width: 550px;
+    }
     .card {
         max-width: 300px;
         }
